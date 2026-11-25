@@ -1,0 +1,105 @@
+
+.leave-review-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    min-width: 155px;
+}
+
+.review-comment-label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.review-comment-label textarea {
+    width: 100%;
+    min-width: 155px;
+    box-sizing: border-box;
+    padding: 8px;
+    border: 1px solid #d5dce5;
+    border-radius: 7px;
+    font: inherit;
+    font-weight: 400;
+    resize: vertical;
+}
+
+.leave-review-form .btn {
+    justify-content: center;
+    cursor: pointer;
+}
+
+.leave-review-form .btn-approve {
+    background: #16803c;
+    color: #fff;
+    border: 1px solid #16803c;
+}
+
+.leave-review-form .btn-reject {
+    background: #c62828;
+    color: #fff;
+    border: 1px solid #c62828;
+}
+
+.leave-review-form .btn-approve:hover,
+.leave-review-form .btn-reject:hover {
+    filter: brightness(.92);
+}
+
+.employee-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.employee-cell > div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.employee-avatar {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e6efe8;
+    color: #14532d;
+    font-weight: 700;
+}
+
+.leave-type {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 6px;
+    background: #eef2ff;
+    color: #3730a3;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.review-cell p {
+    margin: 0 0 5px;
+    overflow-wrap: anywhere;
+}
+
+.review-cell small,
+.reason-cell {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 700px) {
+    .leave-review-form {
+        min-width: 130px;
+    }
+
+    .review-comment-label textarea {
+        min-width: 130px;
+    }
+}

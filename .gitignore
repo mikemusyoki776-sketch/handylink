@@ -1,0 +1,26 @@
+# Sensitive configuration
+.env
+.env.*
+!.env.example
+
+# Database backups
+*.sql
+*.bak
+
+# Temporary files
+*.log
+*.tmp
+
+# Dependencies
+/vendor/
+/node_modules/
+
+# User uploads
+/uploads/
+
+# Editor files
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db

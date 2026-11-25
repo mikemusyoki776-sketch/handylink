@@ -1,0 +1,255 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f6f3;
+    color: #202820;
+}
+
+.approval-page {
+    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.page-header h1 {
+    color: #052f0c;
+    font-size: 30px;
+    margin: 0 0 8px;
+}
+
+.page-header p,
+.section-heading p {
+    color: #687468;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.back-button {
+    background: #052f0c;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 7px;
+    font-weight: 600;
+}
+
+.back-button:hover {
+    background: #0b4816;
+}
+
+.approval-card {
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 14px rgba(5, 47, 12, 0.07);
+}
+
+.section-heading {
+    margin-bottom: 22px;
+}
+
+.section-heading h2 {
+    color: #052f0c;
+    font-size: 22px;
+    margin: 0 0 10px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 1100px;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #052f0c;
+    color: #fff;
+}
+
+th,
+td {
+    padding: 15px 13px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #e5ebe5;
+}
+
+th {
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+td {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+tbody tr:hover {
+    background: #f8faf8;
+}
+
+.provider-detail {
+    display: block;
+    color: #687468;
+    font-size: 12px;
+    margin-top: 5px;
+    overflow-wrap: anywhere;
+}
+
+.document-link {
+    display: inline-block;
+    color: #075c20;
+    font-weight: 600;
+    margin-top: 9px;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.status-badge.pending {
+    background: #fff1d4;
+    color: #805400;
+}
+
+.status-badge.approved {
+    background: #e2f4e5;
+    color: #176329;
+}
+
+.status-badge.rejected {
+    background: #fde8e7;
+    color: #a3231c;
+}
+
+.decision-form {
+    min-width: 220px;
+}
+
+.decision-form label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.decision-form textarea {
+    width: 100%;
+    min-height: 85px;
+    padding: 10px;
+    border: 1px solid #d3ddd3;
+    border-radius: 6px;
+    resize: vertical;
+    font: inherit;
+    font-size: 13px;
+}
+
+.decision-form textarea:focus {
+    outline: 2px solid rgba(5, 47, 12, 0.15);
+    border-color: #052f0c;
+}
+
+.decision-button {
+    border: none;
+    border-radius: 6px;
+    padding: 10px 13px;
+    margin-top: 9px;
+    margin-right: 4px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.approve-button {
+    background: #052f0c;
+    color: #fff;
+}
+
+.approve-button:hover {
+    background: #0b4816;
+}
+
+.reject-button {
+    background: #a3231c;
+    color: #fff;
+}
+
+.reject-button:hover {
+    background: #7e1914;
+}
+
+.blocked-note {
+    display: block;
+    color: #a3231c;
+    background: #fff0ef;
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.alert {
+    padding: 14px 18px;
+    border-radius: 7px;
+    margin-bottom: 22px;
+}
+
+.success-alert {
+    color: #145522;
+    background: #e7f5e9;
+    border: 1px solid #b8dfbf;
+}
+
+.error-alert {
+    color: #a3231c;
+    background: #fff0ef;
+    border: 1px solid #f0c3bf;
+}
+
+.empty-state {
+    padding: 35px 15px;
+    text-align: center;
+    color: #687468;
+}
+
+@media (max-width: 768px) {
+    .approval-page {
+        padding: 18px 12px;
+    }
+
+    .page-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .page-header h1 {
+        font-size: 25px;
+    }
+
+    .approval-card {
+        padding: 16px 12px;
+    }
+}

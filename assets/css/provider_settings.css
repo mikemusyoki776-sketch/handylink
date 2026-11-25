@@ -1,0 +1,502 @@
+
+/* =========================================
+   HANDYLINK PROVIDER SETTINGS & PROFILE
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f5f7f5;
+    color: #263329;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.settings-header {
+    width: 100%;
+    background: #052f0c;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.settings-header-inner {
+    max-width: 1250px;
+    min-height: 72px;
+    margin: auto;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.settings-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.settings-brand img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+.settings-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.settings-nav a {
+    padding: 12px 15px;
+    color: #e5eee6;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+}
+
+.settings-nav a i {
+    margin-right: 6px;
+}
+
+.settings-nav a:hover,
+.settings-nav a.active {
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff;
+}
+
+/* Main container */
+
+.settings-container {
+    width: 100%;
+    max-width: 1050px;
+    margin: 35px auto;
+    padding: 0 22px 40px;
+}
+
+.settings-heading {
+    margin-bottom: 25px;
+}
+
+.settings-heading h1 {
+    margin: 0 0 8px;
+    color: #052f0c;
+    font-size: 27px;
+}
+
+.settings-heading p {
+    margin: 0;
+    color: #748076;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Alerts */
+
+.settings-alert {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.settings-alert.success {
+    color: #17632b;
+    background: #e7f5e9;
+    border: 1px solid #c7e7cd;
+}
+
+.settings-alert.error {
+    color: #a52c2c;
+    background: #fff0f0;
+    border: 1px solid #f1caca;
+}
+
+/* Profile photo card */
+
+.profile-card,
+.settings-card {
+    background: #fff;
+    border: 1px solid #e5ebe5;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 22px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.035);
+}
+
+.profile-photo-section {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e3ece4;
+}
+
+.profile-photo-info {
+    min-width: 150px;
+}
+
+.profile-photo-info h2 {
+    margin: 0 0 7px;
+    font-size: 19px;
+    color: #052f0c;
+}
+
+.profile-photo-info p {
+    margin: 0;
+    color: #778178;
+    font-size: 13px;
+}
+
+.photo-form {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.photo-form input[type="file"] {
+    display: none;
+}
+
+.photo-select,
+.small-save-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 10px 13px;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.photo-select {
+    background: #edf4ee;
+    color: #052f0c;
+    border: 1px solid #d5e4d7;
+}
+
+.photo-select:hover {
+    background: #e0ece2;
+}
+
+.small-save-button {
+    border: none;
+    background: #052f0c;
+    color: #fff;
+}
+
+.small-save-button:hover,
+.primary-save-button:hover {
+    background: #0a4815;
+}
+
+.photo-form small {
+    width: 100%;
+    color: #89928a;
+    font-size: 11px;
+}
+
+/* Section headings */
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 25px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #edf0ed;
+}
+
+.section-icon {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #edf4ee;
+    color: #052f0c;
+    border-radius: 8px;
+    font-size: 17px;
+}
+
+.section-heading h2 {
+    margin: 0 0 5px;
+    color: #052f0c;
+    font-size: 18px;
+}
+
+.section-heading p {
+    margin: 0;
+    color: #879087;
+    font-size: 12px;
+}
+
+/* Form layout */
+
+.settings-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    color: #354238;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #dce4dc;
+    border-radius: 6px;
+    outline: none;
+    background: #fff;
+    color: #263329;
+    font-family: inherit;
+    font-size: 13px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input {
+    height: 43px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 90px;
+    line-height: 1.6;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #17632b;
+    box-shadow: 0 0 0 3px rgba(23, 99, 43, 0.08);
+}
+
+.full-width {
+    width: 100%;
+}
+
+/* Buttons */
+
+.primary-save-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 19px;
+    background: #052f0c;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+/* Responsive design */
+
+@media (max-width: 700px) {
+
+    .settings-header-inner {
+        padding: 14px 16px;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .settings-nav {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .settings-nav a {
+        white-space: nowrap;
+        padding: 10px 11px;
+        font-size: 12px;
+    }
+
+    .settings-container {
+        margin-top: 25px;
+        padding: 0 14px 30px;
+    }
+
+    .settings-heading h1 {
+        font-size: 23px;
+    }
+
+    .profile-card,
+    .settings-card {
+        padding: 18px;
+    }
+
+    .profile-photo-section {
+        align-items: flex-start;
+    }
+
+    .profile-photo {
+        width: 78px;
+        height: 78px;
+    }
+
+    .photo-form {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .settings-form-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .primary-save-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .profile-photo-section {
+        flex-direction: column;
+    }
+
+    .photo-form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .photo-form small {
+        margin-top: 3px;
+    }
+}
+
+
+/* =========================================
+   DARK MODE - PROVIDER SETTINGS
+========================================= */
+
+body.dark-mode {
+    background: #121a14;
+    color: #e5eae6;
+}
+
+body.dark-mode .settings-heading h1,
+body.dark-mode .profile-photo-info h2,
+body.dark-mode .section-heading h2 {
+    color: #e5eae6;
+}
+
+body.dark-mode .settings-heading p,
+body.dark-mode .profile-photo-info p,
+body.dark-mode .section-heading p {
+    color: #aab5ac;
+}
+
+body.dark-mode .profile-card,
+body.dark-mode .settings-card {
+    background: #1c2820;
+    border-color: #344238;
+    box-shadow: none;
+}
+
+body.dark-mode .section-heading {
+    border-bottom-color: #344238;
+}
+
+body.dark-mode .section-icon {
+    background: #263d2b;
+    color: #b8d8bd;
+}
+
+body.dark-mode .form-group label {
+    color: #dce5dd;
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+    background: #121a14;
+    color: #e5eae6;
+    border-color: #405044;
+}
+
+body.dark-mode .form-group input::placeholder,
+body.dark-mode .form-group textarea::placeholder {
+    color: #89968c;
+}
+
+body.dark-mode .form-group input:focus,
+body.dark-mode .form-group textarea:focus {
+    border-color: #75ad7d;
+    box-shadow: 0 0 0 3px rgba(117, 173, 125, 0.12);
+}
+
+body.dark-mode .photo-select {
+    background: #263d2b;
+    color: #e5eae6;
+    border-color: #405044;
+}
+
+body.dark-mode .photo-select:hover {
+    background: #304b35;
+}
+
+body.dark-mode .photo-form small {
+    color: #aab5ac;
+}
+
+body.dark-mode .profile-photo {
+    border-color: #405044;
+}
+
+body.dark-mode .settings-alert.success {
+    background: #193522;
+    color: #a9e0b3;
+    border-color: #315c3b;
+}
+
+body.dark-mode .settings-alert.error {
+    background: #3a2020;
+    color: #ffb4b4;
+    border-color: #704040;
+}
+
+body.dark-mode .settings-nav a {
+    color: #dce5dd;
+}
+
+body.dark-mode .settings-nav a:hover,
+body.dark-mode .settings-nav a.active {
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff;
+}

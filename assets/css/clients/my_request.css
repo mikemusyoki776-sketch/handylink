@@ -1,0 +1,808 @@
+/* My Requests page */
+
+.my-requests-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 34px 5% 55px;
+    min-height: calc(100vh - 150px);
+    color: #26352a;
+}
+
+.my-requests-container * {
+    box-sizing: border-box;
+}
+
+.my-requests-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.my-requests-heading .eyebrow {
+    display: inline-block;
+    margin-bottom: 9px;
+    color: #28733c;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+}
+
+.my-requests-heading h1 {
+    margin: 0 0 9px;
+    color: #173c23;
+    font-size: clamp(26px, 3vw, 34px);
+    font-weight: 750;
+    line-height: 1.25;
+}
+
+.my-requests-heading p {
+    margin: 0;
+    color: #758078;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.my-requests-container .primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 44px;
+    padding: 12px 19px;
+    border: 1px solid #17652b;
+    border-radius: 8px;
+    background: #17652b;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 650;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.my-requests-container .primary-button:hover {
+    background: #104d20;
+    transform: translateY(-1px);
+}
+
+.request-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.request-summary-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 0;
+    padding: 23px 21px;
+    border: 1px solid #e7ece7;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 3px 14px rgba(25, 55, 32, 0.035);
+}
+
+.request-summary-icon {
+    display: flex;
+    flex: 0 0 48px;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #e7f3e9;
+    color: #17652b;
+    font-size: 19px;
+}
+
+.request-summary-icon.pending-icon {
+    background: #fff3d9;
+    color: #a66a08;
+}
+
+.request-summary-icon.accepted-icon {
+    background: #e6f1ff;
+    color: #2865a8;
+}
+
+.request-summary-icon.completed-icon {
+    background: #e5f5ed;
+    color: #18834a;
+}
+
+.request-summary-card > div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    min-width: 0;
+}
+
+.request-summary-card span {
+    color: #778179;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.request-summary-card strong {
+    color: #173c23;
+    font-size: 27px;
+    font-weight: 750;
+    line-height: 1;
+}
+
+.requests-panel {
+    overflow: hidden;
+    border: 1px solid #e6ebe6;
+    border-radius: 13px;
+    background: #fff;
+    box-shadow: 0 4px 18px rgba(25, 55, 32, 0.035);
+}
+
+.requests-panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 25px 27px 21px;
+    border-bottom: 1px solid #edf0ed;
+}
+
+.requests-panel-heading h2 {
+    margin: 0 0 7px;
+    color: #203c29;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.requests-panel-heading p {
+    margin: 0;
+    color: #7b857d;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.request-total-label {
+    padding: 7px 11px;
+    border-radius: 20px;
+    background: #edf6ef;
+    color: #17652b;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.request-tools {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 20px 27px;
+    border-bottom: 1px solid #edf0ed;
+    background: #fcfdfc;
+}
+
+.request-search-form {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    gap: 11px;
+    min-width: 0;
+    min-height: 43px;
+    padding: 0 12px;
+    border: 1px solid #dfe6df;
+    border-radius: 8px;
+    background: #fff;
+    color: #849087;
+}
+
+.request-search-form > i {
+    flex-shrink: 0;
+    font-size: 14px;
+}
+
+.request-search-form input {
+    width: 100%;
+    min-width: 0;
+    height: 41px;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #26352a;
+    font: inherit;
+    font-size: 13px;
+}
+
+.request-search-form input::placeholder {
+    color: #98a199;
+}
+
+.request-search-form button {
+    flex-shrink: 0;
+    padding: 8px 13px;
+    border: none;
+    border-radius: 6px;
+    background: #17652b;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 650;
+    cursor: pointer;
+}
+
+.request-search-form button:hover {
+    background: #104d20;
+}
+
+.request-filter-form {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-width: 175px;
+    min-height: 43px;
+    padding: 0 12px;
+    border: 1px solid #dfe6df;
+    border-radius: 8px;
+    background: #fff;
+    color: #748077;
+}
+
+.request-filter-form select {
+    width: 100%;
+    min-width: 0;
+    height: 41px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #344638;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.request-list {
+    padding: 0 27px;
+}
+
+.request-item {
+    display: grid;
+    grid-template-columns: 45px minmax(0, 1fr) auto;
+    align-items: start;
+    gap: 17px;
+    padding: 25px 0;
+    border-bottom: 1px solid #edf0ed;
+}
+
+.request-item:last-child {
+    border-bottom: none;
+}
+
+.request-item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border: 1px solid #e1eee3;
+    border-radius: 10px;
+    background: #edf6ef;
+    color: #17652b;
+    font-size: 17px;
+}
+
+.request-item-content {
+    min-width: 0;
+}
+
+.request-title-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 9px;
+}
+
+.request-category {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 5px;
+    background: #edf6ef;
+    color: #17652b;
+    font-size: 10px;
+    font-weight: 750;
+    letter-spacing: 0.3px;
+}
+
+.request-number {
+    color: #89938b;
+    font-size: 11px;
+}
+
+.request-item-content h3 {
+    margin: 0 0 9px;
+    color: #203c29;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.request-description {
+    margin: 0 0 15px;
+    color: #727d74;
+    font-size: 13px;
+    line-height: 1.75;
+    overflow-wrap: anywhere;
+}
+
+.request-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+}
+
+.request-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #78837a;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.request-meta i {
+    color: #39804a;
+    font-size: 12px;
+}
+
+.request-item-status {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 2px;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 11px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.status-pending {
+    background: #fff4dd;
+    color: #a66a08;
+}
+
+.status-accepted {
+    background: #e7f1ff;
+    color: #2865a8;
+}
+
+.status-in_progress {
+    background: #e8edff;
+    color: #4c59b4;
+}
+
+.status-completed {
+    background: #e5f5eb;
+    color: #18834a;
+}
+
+.status-rejected {
+    background: #ffebeb;
+    color: #b83232;
+}
+
+.status-cancelled {
+    background: #f0f1f0;
+    color: #68716a;
+}
+
+.requests-results-footer {
+    padding: 17px 27px;
+    border-top: 1px solid #edf0ed;
+    background: #fcfdfc;
+    color: #7c867e;
+    font-size: 12px;
+}
+
+.requests-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 65px 24px;
+    text-align: center;
+}
+
+.requests-empty-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background: #edf6ef;
+    color: #17652b;
+    font-size: 27px;
+}
+
+.requests-empty-state h3 {
+    margin: 0 0 10px;
+    color: #203c29;
+    font-size: 19px;
+}
+
+.requests-empty-state p {
+    max-width: 430px;
+    margin: 0 0 23px;
+    color: #7b857d;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.requests-empty-state .primary-button {
+    min-height: 42px;
+}
+
+.requests-error {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    padding: 17px 20px;
+    border: 1px solid #f2d1d1;
+    border-radius: 9px;
+    background: #fff3f3;
+    color: #a52e2e;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+@media (max-width: 1050px) {
+    .my-requests-container {
+        padding-right: 3%;
+        padding-left: 3%;
+    }
+
+    .request-summary-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .request-item {
+        grid-template-columns: 42px minmax(0, 1fr);
+    }
+
+    .request-item-status {
+        grid-column: 2;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 650px) {
+    .my-requests-container {
+        padding: 25px 16px 38px;
+    }
+
+    .my-requests-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+        margin-bottom: 22px;
+    }
+
+    .my-requests-heading h1 {
+        font-size: 27px;
+    }
+
+    .my-requests-heading .primary-button {
+        width: 100%;
+    }
+
+    .request-summary-grid {
+        gap: 11px;
+        margin-bottom: 21px;
+    }
+
+    .request-summary-card {
+        gap: 10px;
+        padding: 16px 12px;
+        border-radius: 10px;
+    }
+
+    .request-summary-icon {
+        flex-basis: 38px;
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+    }
+
+    .request-summary-card span {
+        font-size: 11px;
+    }
+
+    .request-summary-card strong {
+        font-size: 23px;
+    }
+
+    .requests-panel-heading {
+        align-items: flex-start;
+        padding: 20px 16px;
+    }
+
+    .requests-panel-heading h2 {
+        font-size: 17px;
+    }
+
+    .requests-panel-heading p {
+        font-size: 12px;
+    }
+
+    .request-total-label {
+        font-size: 10px;
+    }
+
+    .request-tools {
+        align-items: stretch;
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .request-search-form,
+    .request-filter-form {
+        width: 100%;
+        flex: none;
+    }
+
+    .request-list {
+        padding: 0 16px;
+    }
+
+    .request-item {
+        grid-template-columns: 36px minmax(0, 1fr);
+        gap: 12px;
+        padding: 21px 0;
+    }
+
+    .request-item-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .request-item-content h3 {
+        font-size: 15px;
+    }
+
+    .request-description {
+        font-size: 12px;
+    }
+
+    .request-meta {
+        flex-direction: column;
+        gap: 7px;
+    }
+
+    .request-item-status {
+        grid-column: 2;
+    }
+
+    .requests-results-footer {
+        padding: 15px 16px;
+    }
+
+    .requests-empty-state {
+        padding: 48px 18px;
+    }
+}
+
+@media (max-width: 380px) {
+    .request-summary-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .requests-panel-heading {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+
+/* HandyLink shared client light and dark themes */
+
+html[data-theme="light"] {
+    color-scheme: light;
+    --client-bg: #f4f7f4;
+    --client-card: #ffffff;
+    --client-text: #202b23;
+    --client-muted: #718076;
+    --client-border: #e1e8e2;
+    --client-green: #0b6336;
+    --client-soft-green: #eaf5ed;
+}
+
+html[data-theme="dark"] {
+    color-scheme: dark;
+    --client-bg: #111813;
+    --client-card: #1b251e;
+    --client-text: #edf5ef;
+    --client-muted: #a4b3a7;
+    --client-border: #344338;
+    --client-green: #55c77d;
+    --client-soft-green: #253d2c;
+}
+
+html[data-theme] body {
+    background-color: var(--client-bg) !important;
+    color: var(--client-text);
+}
+
+html[data-theme] main,
+html[data-theme] .main-content,
+html[data-theme] .page-content,
+html[data-theme] .content,
+html[data-theme] .dashboard-content {
+    background-color: var(--client-bg);
+    color: var(--client-text);
+}
+
+html[data-theme] .card,
+html[data-theme] .stat-card,
+html[data-theme] .service-card,
+html[data-theme] .booking-card,
+html[data-theme] .request-card,
+html[data-theme] .message-card,
+html[data-theme] .review-card,
+html[data-theme] .panel,
+html[data-theme] .modal-content {
+    background-color: var(--client-card);
+    color: var(--client-text);
+    border-color: var(--client-border);
+}
+
+html[data-theme] h1,
+html[data-theme] h2,
+html[data-theme] h3,
+html[data-theme] h4,
+html[data-theme] label {
+    color: var(--client-text);
+}
+
+html[data-theme] p,
+html[data-theme] small,
+html[data-theme] .text-muted {
+    color: var(--client-muted);
+}
+
+html[data-theme] input,
+html[data-theme] textarea,
+html[data-theme] select {
+    background-color: var(--client-card);
+    color: var(--client-text);
+    border-color: var(--client-border);
+}
+
+html[data-theme] table th,
+html[data-theme] table td {
+    border-color: var(--client-border);
+}
+
+html[data-theme="dark"] table th,
+html[data-theme="dark"] table td {
+    color: var(--client-text);
+}
+
+html[data-theme] a {
+    transition: background-color 0.2s, color 0.2s;
+}
+
+/* =========================================
+   MY REQUESTS - SHARED LIGHT/DARK THEME
+========================================= */
+
+/* Page background and text */
+html[data-theme] .my-requests-container {
+    background: transparent;
+    color: var(--client-text);
+}
+
+html[data-theme] .my-requests-heading h1,
+html[data-theme] .requests-panel-heading h2,
+html[data-theme] .request-item-content h3,
+html[data-theme] .request-summary-card strong {
+    color: var(--client-text);
+}
+
+html[data-theme] .my-requests-heading p,
+html[data-theme] .requests-panel-heading p,
+html[data-theme] .request-summary-card span,
+html[data-theme] .request-description,
+html[data-theme] .request-number,
+html[data-theme] .request-meta span {
+    color: var(--client-muted);
+}
+
+/* Statistics cards */
+html[data-theme] .request-summary-card {
+    background: var(--client-card);
+    color: var(--client-text);
+    border-color: var(--client-border);
+    box-shadow: none;
+}
+
+/* Main requests panel */
+html[data-theme] .requests-panel {
+    background: var(--client-card);
+    color: var(--client-text);
+    border-color: var(--client-border);
+    box-shadow: none;
+}
+
+html[data-theme] .requests-panel-heading,
+html[data-theme] .request-tools,
+html[data-theme] .requests-results-footer {
+    background: var(--client-card);
+    border-color: var(--client-border);
+}
+
+/* Search and filter controls */
+html[data-theme] .request-search-form,
+html[data-theme] .request-filter-form {
+    background: var(--client-bg);
+    border-color: var(--client-border);
+    color: var(--client-muted);
+}
+
+html[data-theme] .request-search-form input,
+html[data-theme] .request-filter-form select {
+    background: transparent;
+    color: var(--client-text);
+}
+
+html[data-theme] .request-search-form input::placeholder {
+    color: var(--client-muted);
+}
+
+/* Request list separators */
+html[data-theme] .request-item {
+    border-color: var(--client-border);
+}
+
+/* Dark theme status-independent elements */
+html[data-theme="dark"] .request-summary-icon,
+html[data-theme="dark"] .request-item-icon,
+html[data-theme="dark"] .request-category {
+    background: var(--client-soft-green);
+    color: var(--client-green);
+}
+
+html[data-theme="dark"] .request-total-label {
+    background: var(--client-soft-green);
+    color: var(--client-green);
+}
+
+html[data-theme="dark"] .request-search-form button {
+    background: #0b6336;
+    color: #ffffff;
+}
+
+html[data-theme="dark"] .request-filter-form select option {
+    background: var(--client-card);
+    color: var(--client-text);
+}

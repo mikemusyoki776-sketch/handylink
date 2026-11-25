@@ -1,0 +1,261 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f6f3;
+    color: #202820;
+}
+
+.notifications-page {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.page-header h1 {
+    color: #052f0c;
+    font-size: 30px;
+    margin: 0 0 8px;
+}
+
+.page-header p,
+.section-description,
+.section-heading p {
+    color: #687468;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.back-button {
+    background: #052f0c;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 7px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.back-button:hover,
+.send-button:hover {
+    background: #0b4816;
+}
+
+.notification-form-card,
+.recent-notifications {
+    background: #fff;
+    border-radius: 12px;
+    padding: 26px;
+    margin-bottom: 28px;
+    box-shadow: 0 3px 14px rgba(5, 47, 12, 0.07);
+}
+
+.notification-form-card h2,
+.section-heading h2 {
+    color: #052f0c;
+    margin: 0 0 12px;
+    font-size: 22px;
+}
+
+.heading-icon {
+    margin-right: 8px;
+}
+
+.section-description {
+    margin-bottom: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #263b29;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    display: block;
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d3ddd3;
+    border-radius: 7px;
+    background: #fff;
+    color: #202820;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #052f0c;
+    box-shadow: 0 0 0 3px rgba(5, 47, 12, 0.1);
+}
+
+.form-group small {
+    display: block;
+    color: #8a4b08;
+    margin-top: 8px;
+}
+
+.send-button {
+    background: #052f0c;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    padding: 14px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.alert {
+    padding: 14px 18px;
+    border-radius: 7px;
+    margin-bottom: 22px;
+    line-height: 1.5;
+}
+
+.success-alert {
+    background: #e7f5e9;
+    color: #145522;
+    border: 1px solid #b8dfbf;
+}
+
+.error-alert {
+    background: #fff0ef;
+    color: #a3231c;
+    border: 1px solid #f0c3bf;
+}
+
+.section-heading {
+    margin-bottom: 22px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+}
+
+thead {
+    background: #052f0c;
+    color: #fff;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 15px 14px;
+    border-bottom: 1px solid #e6ece6;
+    vertical-align: top;
+}
+
+th {
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+td {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+tbody tr:hover {
+    background: #f7faf7;
+}
+
+.message-preview {
+    color: #687468;
+    margin: 5px 0 0;
+    max-width: 360px;
+    overflow-wrap: anywhere;
+}
+
+.type-label,
+.status-label {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.type-label {
+    background: #edf1ed;
+    color: #344b37;
+}
+
+.status-label.unread {
+    background: #fff2d8;
+    color: #895500;
+}
+
+.status-label.read {
+    background: #e4f5e7;
+    color: #176329;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 35px 15px;
+    color: #687468;
+}
+
+@media (max-width: 768px) {
+    .notifications-page {
+        padding: 18px 12px;
+    }
+
+    .page-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .page-header h1 {
+        font-size: 25px;
+    }
+
+    .notification-form-card,
+    .recent-notifications {
+        padding: 18px 14px;
+    }
+
+    .send-button {
+        width: 100%;
+    }
+}
